@@ -1,0 +1,40 @@
+<div class="row" style="background-color: lightgrey; border: solid salmon 5px; ">
+    <h3 class="jk_center" style="padding: 4px;" *ngIf="selectedClub">{{selectedClub.name}}</h3>
+</div>
+<div *ngIf="selectedClub" class="row">
+   <div id="container">
+        <div class="jk_center crest_section">
+            <img style="width: 100px; height: 100px;" src="{{selectedClub.crestUrl}}">
+        </div>
+        <ul class="list-group club_details">
+            <li class="list-group-item" style="width: 100%">
+                <label class="club_detail">Club: </label><span class="club_detail ">{{selectedClub.shortName}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="club_detail">Address: </label><span class="club_detail ">{{selectedClub.address}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="club_detail">Phone No: </label><span class="club_detail ">{{selectedClub.phone}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="club_detail">Website: </label><span class="club_detail ">{{selectedClub.website}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="club_detail">Email: </label><span class="club_detail ">{{selectedClub.email}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="club_detail">Founded: </label><span class="club_detail ">{{selectedClub.founded}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="club_detail">Club Colors: </label><span class="club_detail ">{{selectedClub.clubColors}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="club_detail">Venue: </label><span class="club_detail ">{{selectedClub.venue}}</span>
+            </li>
+        </ul>
+        <button (click)=viewSquad() class="btn btn-primary">View Squad</button>
+   </div>    
+        
+        
+   
+</div>

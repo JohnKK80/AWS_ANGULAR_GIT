@@ -1,0 +1,12 @@
+<div class="row">
+    <p>male-employee works!</p>
+    <div class="form-group">
+        <label for="team">Team</label>
+        <input #team class="form-control" type="text" id="team" placeholder="enter team..." >
+        <button (click)="addFootballTeam(team.value)" class="btn btn-primary">Submit Team</button>
+    </div>
+    <div style="padding: 20px;">
+        <h3>{{footballTeam}}</h3>
+    </div>
+</div>
+

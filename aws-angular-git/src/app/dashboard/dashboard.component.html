@@ -1,0 +1,26 @@
+<div class="row" style="border: solid 2px red">
+    <div style="border: solid 2px green">
+        <div class="central">
+            <app-retirements class="col-md-4 dashboard_three"></app-retirements>
+            <app-old-list class="col-md-4 dashboard_three"></app-old-list>
+            <app-chosen-one class="col-md-4 dashboard_three"></app-chosen-one>
+        </div>
+    </div>
+
+</div>
+<div class="row" style="border: solid 2px red">
+    <div class="col-xs-12" style="border: solid 2px green">
+        <div>
+            <h3>Employees</h3>
+            <ul class="list-group">
+                <li [routerLink]="['/']" routerLinkActive="router-link-active"  class="list-group-item" (click)="personChosen(person)" *ngFor="let person of people">
+                    <a>
+                        {{person.emp_no}} {{person.first_name}} 
+                        {{person.last_name}} {{person.birth_date | date: 'shortDate'}}
+                    </a> 
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>

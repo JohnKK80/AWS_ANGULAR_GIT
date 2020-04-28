@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-xs-4">
+        <div>
+            <h3>Manager</h3>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let footballer of squad | filterPipe: 'COACH': 'role'"
+                >{{footballer.name }}</li>
+            </ul>
+            <h3>Goalkeepers</h3>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let footballer of squad | filterPipe: 'Goalkeeper': 'position'"
+                >{{footballer.name }}</li>
+            </ul>
+            <hr>
+            <h3>Defenders</h3>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let footballer of squad | filterPipe: 'Defender': 'position'"
+                >{{footballer.name }}</li>
+            </ul>
+            <hr>
+        </div>
+        
+    </div>
+    <div class="col-xs-4">
+        <div>
+            <h3>Midfielders</h3>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let footballer of squad | filterPipe: 'Midfielder': 'position'"
+                >{{footballer.name }}</li>
+            </ul>
+            <hr>
+            <h3>Attackers</h3>
+            <ul class="list-group">
+                <li class="list-group-item" *ngFor="let footballer of squad | filterPipe: 'Attacker': 'position'"
+                >{{footballer.name }}</li>
+            </ul>
+            <hr>
+        </div>
+        
+    </div>          
+</div>

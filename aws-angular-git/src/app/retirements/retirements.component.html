@@ -1,0 +1,9 @@
+<div style="border: solid black 2px">
+    <h4 class="h4" style="padding-left: 10px;">Upcoming Retirees</h4>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let retiree of retiringPeople"> {{retiree.first_name | uppercase}} 
+            {{retiree.last_name | uppercase}} {{retiree.birth_date | date: 'shortDate'}}
+        </li>
+    </ul>
+</div>
+

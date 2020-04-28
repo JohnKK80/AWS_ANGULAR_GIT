@@ -1,0 +1,11 @@
+<div  style="border: solid green 2px">
+    <div>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let oldie of oldPeople">
+                {{oldie.first_name}}
+            </li>
+        </ul>
+    </div>
+    <button class="btn btn-danger" (click) = getOldPeople()>Get Old people</button>
+</div>
+

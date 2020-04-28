@@ -1,0 +1,11 @@
+<div class="row" style="background-color: lightgray; border: solid salmon 5px;">
+    <h3 style="padding: 4px;">Premiership Teams</h3>
+</div>
+<div class="row" style="padding: 4px; background-color: lightsalmon;">
+    <ul class="list-group">
+        <li (click)="viewTeam(team.id)" *ngFor="let team of premiershipTeams" class="list-group-item">
+            <a href="javascript:void(0)">{{team.name}}</a>
+            
+        </li>
+    </ul>
+</div>

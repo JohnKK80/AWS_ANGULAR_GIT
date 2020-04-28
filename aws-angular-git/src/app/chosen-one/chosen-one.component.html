@@ -1,0 +1,23 @@
+<div style="position: relative; bottom: 100px; border: grey solid 2px; height: 100%; width: 100%;"> 
+    <div style="background-color: lightgray; padding: 5px;">
+        <h3 style="height: 75%;">Chosen One</h3>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <label class="chosen_one_details label label-primary">Name</label>
+                <span *ngIf="theChosenOne" class="chosen_one_details">{{theChosenOne.first_name}} {{theChosenOne.last_name}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="chosen_one_details label label-primary">Employee Number</label>
+                <span *ngIf="theChosenOne" class="chosen_one_details">{{theChosenOne.emp_no}}</span>
+            </li>
+            <li class="list-group-item">
+                <label class="chosen_one_details label label-primary">Employee Number</label>
+                <span *ngIf="theChosenOne" class="chosen_one_details">{{theChosenOne.hire_date | date: 'shortDate'}}</span>
+            </li>
+        </ul>
+    </div>
+    <div style="padding: 5px; background-color: rgb(109, 104, 104)">
+        <button [disabled]="!theChosenOne" (click)="viewEmployee()" class="btn btn-warning">View Details</button>
+    </div>
+    
+</div>
